@@ -1,162 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maurya Ambulance</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
-    header { background: #d80027; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1588776814546-ec3452c5c158?fit=crop&w=1600&q=80') no-repeat center center/cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-    }
-    .hero h1 { font-size: 3em; text-shadow: 2px 2px 4px black; margin:0; }
-    .hero p { font-size: 1.2em; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #d80027; }
-    .services, .why-us { display: flex; flex-wrap: wrap; gap: 20px; }
-    .card {
-      flex: 1 1 300px;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
-    .contact { background: #f1f1f1; padding: 40px 20px; }
-    .contact p { margin: 5px 0; }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2em; }
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top: 10px; }
-    }
-  </style>
-  <style>
-      .marquee-container {
-          width: 100%;
-          overflow: hidden;
-          position: relative;
-          height: 400px;
-          background: #f5f5f5; /* optional background */
-      }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maurya Ambulance</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-      .marquee-track {
-          display: flex;
-          position: absolute;
-          top: 0;
-          right: -100%;
-          animation: marquee 20s linear infinite;
-      }
+        header {
+            background: #d80027;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-          .marquee-track img {
-              height: 400px;
-              margin-right: 20px; /* spacing between images */
-          }
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-      @keyframes marquee {
-          from {
-              right: -100%;
-          }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1588776814546-ec3452c5c158?fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
 
-          to {
-              right: 100%;
-          }
-      }
-  </style>
+            .hero h1 {
+                font-size: 3em;
+                text-shadow: 2px 2px 4px black;
+                margin: 0;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #d80027;
+        }
+
+        .services, .why-us {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 300px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+            .card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+        .contact {
+            background: #f1f1f1;
+            padding: 40px 20px;
+        }
+
+            .contact p {
+                margin: 5px 0;
+            }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <style>
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            background: #f5f5f5; /* optional background */
+        }
+
+        .marquee-track {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: -100%;
+            animation: marquee 20s linear infinite;
+        }
+
+            .marquee-track img {
+                height: 400px;
+                margin-right: 20px; /* spacing between images */
+            }
+
+        @keyframes marquee {
+            from {
+                right: -100%;
+            }
+
+            to {
+                right: 100%;
+            }
+        }
+    </style>
 
 </head>
 <body>
 
-<header>
-  <div><strong>Maurya Ambulance</strong></div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="tel:7992235029">Call: 7992235029</a>
-  </nav>
-</header>
+    <header>
+        <div><strong>Maurya Ambulance</strong></div>
+        <nav style="display: flex;">
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:7992235029">Call: 7992235029</a>
+            <div>
+                <img src="./Image/whatsapp-icon.jpeg" style="width: 20px; height: 20px; float: left; margin-top: 2px; margin-right: 5px; margin-left: 25px;" />
+                <a href="https://wa.me/+917992235029?text=Hello%20I%20am%20interested%20in%20your%20services" style="margin: 0;">+917992235029</a>
+            </div>           
+        </nav>
+    </header>
 
-<div class="hero">
-    <h1>24x7 Emergency Ambulance in Patna</h1>
-    <div class="marquee-container">
-        <div class="marquee-track">
-            <img src="./Image/ambulance1.jpeg" alt="Image 1">
-            <img src="./Image/ambulance2.jpeg" alt="Image 2">
-            <img src="./Image/ambulance1.jpeg" alt="Image 3">
-            <img src="./Image/ambulance2.jpeg" alt="Image 4">
+    <div class="hero">
+        <h1>24x7 Emergency Ambulance in Patna</h1>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <img src="./Image/ambulance1.jpeg" alt="Image 1">
+                <img src="./Image/ambulance2.jpeg" alt="Image 2">
+                <img src="./Image/ambulance1.jpeg" alt="Image 3">
+                <img src="./Image/ambulance2.jpeg" alt="Image 4">
+            </div>
         </div>
     </div>
-</div>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <img src="./Image/ICU-Ambulance-services.jpeg" alt="ICU Ambulance">
-      <h3>ICU Ambulance</h3>
-      <p>Fully equipped ICU ambulances with trained staff for critical care transport.</p>
-    </div>
-    <div class="card">
-      <img src="./Image/Air-Ambulance.jpeg?auto=format&fit=crop&w=800&q=80" alt="Air Ambulance">
-      <h3>Air Ambulance</h3>
-      <p>Quick and efficient air transport service for long-distance medical transfers.</p>
-    </div>
-    <div class="card">
-      <img src="./Image/medical-stretcher-trolley.jpeg?auto=format&fit=crop&w=800&q=80" alt="Bed-to-Bed Transfer" style="width: auto;height: 250px;">
-      <h3>Bed-to-Bed Transfer</h3>
-      <p>Complete transfer service from one hospital bed to another with full care.</p>
-    </div>
-  </div>
-</section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <img src="./Image/ICU-Ambulance-services.jpeg" alt="ICU Ambulance">
+                <h3>ICU Ambulance</h3>
+                <p>Fully equipped ICU ambulances with trained staff for critical care transport.</p>
+            </div>
+            <div class="card">
+                <img src="./Image/Air-Ambulance.jpeg?auto=format&fit=crop&w=800&q=80" alt="Air Ambulance">
+                <h3>Air Ambulance</h3>
+                <p>Quick and efficient air transport service for long-distance medical transfers.</p>
+            </div>
+            <div class="card">
+                <img src="./Image/medical-stretcher-trolley.jpeg?auto=format&fit=crop&w=800&q=80" alt="Bed-to-Bed Transfer" style="width: auto;height: 250px;">
+                <h3>Bed-to-Bed Transfer</h3>
+                <p>Complete transfer service from one hospital bed to another with full care.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="why">
-  <h2>Why Choose Maurya Ambulance?</h2>
-  <div class="why-us">
-    <div class="card">
-      <h3>Experienced Team</h3>
-      <p>Professional and certified paramedics and drivers available 24/7.</p>
-    </div>
-    <div class="card">
-      <h3>Fast Response</h3>
-      <p>We reach within minutes in Patna and surrounding areas.</p>
-    </div>
-    <div class="card">
-      <h3>Affordable Rates</h3>
-      <p>Best service with budget-friendly pricing. No hidden charges.</p>
-    </div>
-  </div>
-</section>
+    <section id="why">
+        <h2>Why Choose Maurya Ambulance?</h2>
+        <div class="why-us">
+            <div class="card">
+                <h3>Experienced Team</h3>
+                <p>Professional and certified paramedics and drivers available 24/7.</p>
+            </div>
+            <div class="card">
+                <h3>Fast Response</h3>
+                <p>We reach within minutes in Patna and surrounding areas.</p>
+            </div>
+            <div class="card">
+                <h3>Affordable Rates</h3>
+                <p>Best service with budget-friendly pricing. No hidden charges.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Maurya Ambulance is committed to providing quick and dependable emergency medical transport across Patna. Our team is trained to handle all medical emergencies with care, precision, and urgency.</p>
-</section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Maurya Ambulance is committed to providing quick and dependable emergency medical transport across Patna. Our team is trained to handle all medical emergencies with care, precision, and urgency.</p>
+    </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p><strong>Phone:</strong> <a href="tel:7992235029">7992235029</a></p>
-  <p><strong>Email:</strong> <a href="mailto:contact@Mauryaambulance.com">contact@Mauryaambulance.com</a></p>
-  <p><strong>Location:</strong> Patna, Bihar, India</p>
-</section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> <a href="tel:7992235029">7992235029</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact@Mauryaambulance.com">contact@Mauryaambulance.com</a></p>
+        <p><strong>Location:</strong> Patna, Bihar, India</p>
+    </section>
 
-<footer>
-  &copy; 2025 Maurya Ambulance. All rights reserved.
-</footer>
+    <footer>
+        &copy; 2025 Maurya Ambulance. All rights reserved.
+    </footer>
 
 </body>
 </html>
