@@ -11,14 +11,13 @@
     .hero {
       background: url('https://images.unsplash.com/photo-1588776814546-ec3452c5c158?fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
-      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       flex-direction: column;
     }
-    .hero h1 { font-size: 3em; text-shadow: 2px 2px 4px black; }
+    .hero h1 { font-size: 3em; text-shadow: 2px 2px 4px black; margin:0; }
     .hero p { font-size: 1.2em; }
     section { padding: 40px 20px; max-width: 1000px; margin: auto; }
     h2 { color: #d80027; }
@@ -45,6 +44,39 @@
       nav { margin-top: 10px; }
     }
   </style>
+  <style>
+      .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          height: 400px;
+          background: #f5f5f5; /* optional background */
+      }
+
+      .marquee-track {
+          display: flex;
+          position: absolute;
+          top: 0;
+          right: -100%;
+          animation: marquee 20s linear infinite;
+      }
+
+          .marquee-track img {
+              height: 400px;
+              margin-right: 20px; /* spacing between images */
+          }
+
+      @keyframes marquee {
+          from {
+              right: -100%;
+          }
+
+          to {
+              right: 100%;
+          }
+      }
+  </style>
+
 </head>
 <body>
 
@@ -55,13 +87,20 @@
     <a href="#why">Why Us</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a href="tel:7992235029">Call: 7992235029</a>
+    <a href="tel:8447406186">Call: 8447406186</a>
   </nav>
 </header>
 
 <div class="hero">
-  <h1>24x7 Emergency Ambulance in Patna</h1>
-  <p>Fast. Reliable. Life-saving.</p>
+    <h1>24x7 Emergency Ambulance in Patna</h1>
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <img src="https://vickeyraj56.github.io/maurya-ambulance/Image/ambulance1.jpeg" alt="Image 1">
+            <img src="https://vickeyraj56.github.io/maurya-ambulance/Image/ambulance1.jpeg" alt="Image 2">
+            <img src="https://vickeyraj56.github.io/maurya-ambulance/Image/ambulance1.jpeg" alt="Image 3">
+            <img src="https://vickeyraj56.github.io/maurya-ambulance/Image/ambulance1.jpeg" alt="Image 4">
+        </div>
+    </div>
 </div>
 
 <section id="services">
